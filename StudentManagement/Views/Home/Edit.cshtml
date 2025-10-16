@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+<a href="/Students/Index">Back to List</a>
+
+<p>
+    Name: <input data-bind="value: name" /><br />
+    Age: <input data-bind="value: age" type="number" /><br />
+    Phone: <input data-bind="value: phone" /><br />
+    <button data-bind="click: updateStudent">Update</button>
+</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/output/knockout-latest.js"></script>
+<script src="~/js/Editing.js"></script>

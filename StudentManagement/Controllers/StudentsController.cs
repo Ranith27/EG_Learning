@@ -108,6 +108,7 @@ namespace StudentManagement.Controllers
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
+
         {
             var student = await _context.Students.FindAsync(id);
             if (student == null)
