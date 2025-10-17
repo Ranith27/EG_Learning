@@ -1,5 +1,4 @@
-﻿
-    function AddViewModel() {
+﻿  function AddViewModel() {
         var self = this;
         self.name = ko.observable('');
         self.age = ko.observable('');
@@ -25,5 +24,5 @@
             });
         };
     }
-    ko.applyBindings(new AddViewModel());
-}
+ko.applyBindings(new AddViewModel())
+
