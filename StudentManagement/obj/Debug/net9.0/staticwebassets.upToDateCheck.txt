@@ -1,5 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\Adding.js
+wwwroot\js\Editing.js
+wwwroot\js\Landing.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -63,6 +66,9 @@ wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\css\site.css
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\favicon.ico
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Adding.js
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Editing.js
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Landing.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\site.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
