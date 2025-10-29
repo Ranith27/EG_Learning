@@ -66,6 +66,7 @@ wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\css\site.css
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\favicon.ico
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Adding.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Editing.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Landing.js
@@ -126,6 +127,5 @@ C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\li
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.js
-C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.map
