@@ -1,8 +1,11 @@
-﻿namespace StudentManagement.Repositories
+﻿using StudentManagement.Models;
+
+namespace StudentManagement.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
-        IStudentRepository Students { get; }
+        IGenericRepository<Student> Students { get; }
+        IGenericRepository<Course> Courses { get; }
         Task<int> SaveAsync();
     }
 }

@@ -12,17 +12,20 @@ namespace StudentManagement.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;
+        private readonly ILogger<StudentsController> _logger;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(IStudentService studentService, ILogger<StudentsController> logger)//, ILogger<StudentsController> logger)
         {
             _studentService = studentService;
+            _logger = logger;
         }
 
         //Get All the Students details
         [HttpGet]
         public async Task<IActionResult> GetStudents()
         {
-            var students = await _studentService.GetAllStudentsAsync();
+            _logger.LogInformation("GetStudents called at {time}", DateTime.UtcNow);
+            var students = await _studentService.GetAllStudentsAsync().ConfigureAwait(false);
             return Ok(students);
         }
 

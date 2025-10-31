@@ -1,15 +1,18 @@
 ﻿using StudentManagement.Data;
+using StudentManagement.Models;
 
 namespace StudentManagement.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly ApplicationDbContext _context;
-        public IStudentRepository Students { get; }
-        public UnitOfWork(ApplicationDbContext context, IStudentRepository studentRepository)
+        public IGenericRepository<Student> Students { get; }
+        public IGenericRepository<Course> Courses { get; }
+        public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
-            Students = studentRepository;
+            Students = new GenericRepository<Student>(_context);
+            Courses = new GenericRepository<Course>(_context);
         }
         public async Task<int> SaveAsync()
         {
