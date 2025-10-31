@@ -19,7 +19,11 @@ namespace StudentManagement.Services
 
         public async Task<bool> DeleteStudentAsync(int id)
         {
+<<<<<<< HEAD
            var student = await _unitOfWork.Students.GetByIdAsync(id);
+=======
+           var student = await _unitOfWork.Students.GetStudentByIdAsync(id);
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
             if (student == null) return false;
                 _unitOfWork.Students.Delete(student);
                 await _unitOfWork.SaveAsync();
@@ -28,6 +32,7 @@ namespace StudentManagement.Services
 
         public async Task<IEnumerable<Student>> GetAllStudentsAsync()
         {
+<<<<<<< HEAD
             try
             { 
                 var students = await _unitOfWork.Students.GetAllAsync();
@@ -44,16 +49,27 @@ namespace StudentManagement.Services
                 Console.WriteLine($"Error in StudentService.GetAllStudentsAsync: {ex.Message}");
                 throw; 
             }
+=======
+            return await _unitOfWork.Students.GetAllStudentsAsync();
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
         }
 
         public async Task<Student?> GetStudentByIdAsync(int id)
         {
+<<<<<<< HEAD
             return await _unitOfWork.Students.GetByIdAsync(id);
+=======
+            return await _unitOfWork.Students.GetStudentByIdAsync(id);
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
         }
 
         public async Task<bool> PatchAsync(int id, StudentPatchDTO patch)
         {
+<<<<<<< HEAD
             var existingStudent = await _unitOfWork.Students.GetByIdAsync(id);
+=======
+            var existingStudent = await _unitOfWork.Students.GetStudentByIdAsync(id);
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
             if (existingStudent == null) return false;
 
             if (!string.IsNullOrEmpty(patch.Name))

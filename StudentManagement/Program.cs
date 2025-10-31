@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using StudentManagement.Data;
 using StudentManagement.Repositories;
 using StudentManagement.Services;
+<<<<<<< HEAD
 using StudentManagement.Middleware;
+=======
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -13,10 +16,16 @@ builder.Services.AddControllersWithViews()
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddSwaggerGen();
+<<<<<<< HEAD
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
+=======
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IStudentService, StudentService>();
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>

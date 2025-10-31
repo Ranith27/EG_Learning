@@ -66,6 +66,16 @@ wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\css\site.css
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\favicon.ico
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.js
+=======
+>>>>>>> a9cb5c5e3dd1cd14641272553adf53fe9387eb28
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Adding.js
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Editing.js
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Landing.js
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\site.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -123,9 +133,11 @@ C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\li
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.js
-C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\LICENSE.txt
+<<<<<<< HEAD
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Adding.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Editing.js
 C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\js\Landing.js
+=======
+C:\Users\ranna\Documents\LEARNING\StudentManagement\StudentManagement\wwwroot\lib\jquery\dist\jquery.slim.min.map
+>>>>>>> 3b849fae12456242c080b4470fccf4572f111ad9
