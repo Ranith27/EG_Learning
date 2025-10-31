@@ -1,7 +1,9 @@
-﻿using StudentManagement.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentManagement.Data;
+using StudentManagement.Migrations;
+using StudentManagement.Models;
+using StudentManagement.Services;
 
 namespace StudentManagement.Controllers
 {
@@ -10,23 +12,23 @@ namespace StudentManagement.Controllers
 
     public class CourseController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        public CourseController(ApplicationDbContext context)
+        private readonly ICourseService _courseService;
+        public CourseController(ICourseService courseService)
         {
-            _context = context;
+            _courseService = courseService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCourses()
         {
-            var courses = await _context.Courses.ToListAsync();
+            var courses = await _courseService.GetAllCoursesAsync();
             return Ok(courses);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCourse(int id)
         {
-            var course = await _context.Courses.FindAsync(id);
+            var course = await _courseService.GetCourseByIdAsync(id);
             if (course == null)
             {
                 return NotFound();
@@ -40,47 +42,26 @@ namespace StudentManagement.Controllers
             {
                 return BadRequest(ModelState);
             }
-            _context.Courses.Add(Course);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetCourse), new { id = Course.Id }, Course);
+            var createdCourse = await _courseService.CreateCourseAsync(Course);
+            return CreatedAtAction(nameof(GetCourse), new { id = createdCourse.Id }, createdCourse);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCourse(int id, [FromBody] Course Course)
         {
-            if (id != Course.Id)
-            {
-                return BadRequest();
-            }
-            _context.Entry(Course).State = EntityState.Modified;
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_context.Courses.Any(e => e.Id == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            var success = await _courseService.UpdateCourseAsync(id, Course);
+            if (!success)
+                return NotFound();
+
             return NoContent();
         }
-
         [HttpDelete]
         public async Task<IActionResult> DeleteCourse(int id)
         {
-            var course = await _context.Courses.FindAsync(id);
-            if (course == null)
-            {
+            var success = await _courseService.DeleteCourseAsync(id);
+            if (!success)
                 return NotFound();
-            }
-            _context.Courses.Remove(course);
-            await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }
