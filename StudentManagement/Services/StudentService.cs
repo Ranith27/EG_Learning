@@ -19,7 +19,7 @@ namespace StudentManagement.Services
 
         public async Task<bool> DeleteStudentAsync(int id)
         {
-           var student = await _unitOfWork.Students.GetStudentByIdAsync(id);
+           var student = await _unitOfWork.Students.GetByIdAsync(id);
             if (student == null) return false;
                 _unitOfWork.Students.Delete(student);
                 await _unitOfWork.SaveAsync();
@@ -28,17 +28,32 @@ namespace StudentManagement.Services
 
         public async Task<IEnumerable<Student>> GetAllStudentsAsync()
         {
-            return await _unitOfWork.Students.GetAllStudentsAsync();
+            try
+            { 
+                var students = await _unitOfWork.Students.GetAllAsync();
+
+                if (students == null || !students.Any())
+                {
+                    return new List<Student>(); 
+                }
+
+                return students; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in StudentService.GetAllStudentsAsync: {ex.Message}");
+                throw; 
+            }
         }
 
         public async Task<Student?> GetStudentByIdAsync(int id)
         {
-            return await _unitOfWork.Students.GetStudentByIdAsync(id);
+            return await _unitOfWork.Students.GetByIdAsync(id);
         }
 
         public async Task<bool> PatchAsync(int id, StudentPatchDTO patch)
         {
-            var existingStudent = await _unitOfWork.Students.GetStudentByIdAsync(id);
+            var existingStudent = await _unitOfWork.Students.GetByIdAsync(id);
             if (existingStudent == null) return false;
 
             if (!string.IsNullOrEmpty(patch.Name))
